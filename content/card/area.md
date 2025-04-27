@@ -1,7 +1,7 @@
 ---
 title: Area
 style: 'background: #f7f9fb;'
-weight: 1
+weight: 2
 ---
 
 > P.A.R.A
