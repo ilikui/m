@@ -46,7 +46,7 @@ menu:
 params:
   homePosts: 6
   mainSections: ["post", "work"]
-  editLink: "https://github.com/yihui/hugo-prose/edit/master/exampleSite/content/"
+  editLink: "https://github.com/ilikui/m/edit/master/exampleSite/content/"
   authorDelimiter: " / "
   stickyMenu: false
   description: >
@@ -58,7 +58,7 @@ params:
     Text and figures are licensed under [Creative Commons Attribution CC BY
     4.0](https://creativecommons.org/licenses/by/4.0/). The source code is
     licensed under MIT. The full source is available at
-    https://github.com/yihui/hugo-prose.
+    https://github.com/ilikui/m.
 
 markup:
   highlight:
