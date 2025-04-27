@@ -1,7 +1,7 @@
 ---
 title: Publications
 style: 'background: lightslategray; color: white;'
-weight: 3
+weight: 4
 ---
 
 Works attributed to Seneca include a dozen philosophical essays, one hundred and twenty-four letters dealing with moral issues, nine tragedies, and a satire, the attribution of which is disputed. His authorship of _Hercules on Oeta_ has also been questioned.
