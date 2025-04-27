@@ -4,8 +4,6 @@ style: 'background: #f7f9fb;'
 weight: 3
 ---
 
-> Resource
-
 * Web开发
 * 人工智能
 * 体系结构
