@@ -5,9 +5,20 @@
     <description>Recent content in Home on Me</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
 
+    
+      <item>
+        <title>Works</title>
+        <link>/work/</link>
+        <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>/work/</guid>
+        <description>
+          
+        </description>
+      </item>
     
       <item>
         <title>Posts</title>
@@ -15,17 +26,6 @@
         <pubDate>Tue, 10 Nov 2020 00:00:00 +0000</pubDate>
         
         <guid>/post/</guid>
-        <description>
-          
-        </description>
-      </item>
-    
-      <item>
-        <title>Works</title>
-        <link>/work/</link>
-        <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
-        
-        <guid>/work/</guid>
         <description>
           
         </description>
