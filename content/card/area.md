@@ -1,6 +1,6 @@
 ---
 title: Area
-style: 'background: darkslategray; color: white;'
+style: 'background: #f7f9fb;'
 weight: 1
 ---
 
