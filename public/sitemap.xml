@@ -6,6 +6,8 @@
   </url><url>
     <loc>/card/area/</loc>
   </url><url>
+    <loc>/read/area/</loc>
+  </url><url>
     <loc>/card/philosophy/</loc>
   </url><url>
     <loc>/card/resource/</loc>
@@ -115,6 +117,8 @@
     <loc>/tags/menu/</loc>
   </url><url>
     <loc>/tags/numbered-section/</loc>
+  </url><url>
+    <loc>/read/</loc>
   </url><url>
     <loc>/tags/sidenote/</loc>
   </url><url>
