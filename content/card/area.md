@@ -5,3 +5,4 @@ weight: 1
 ---
 
 This is  a test Card
+* [[philosophy]]
