@@ -1,7 +1,7 @@
 ---
 title: Resource
-style: 'background: darkslategray; color: white;'
+style: 'background: #f7f9fb;'
 weight: 3
 ---
 
-> Resource
+Resource
