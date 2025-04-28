@@ -46,7 +46,7 @@ menu:
 params:
   homePosts: 6
   mainSections: ["post", "work"]
-  editLink: "https://github.com/ilikui/m/blob/main/content"
+  editLink: "https://github.com/ilikui/m/blob/main/content/"
   authorDelimiter: " / "
   stickyMenu: false
   description: >
