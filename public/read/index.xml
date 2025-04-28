@@ -5,16 +5,16 @@
     <link>/read/</link>
     <description>Recent content in Reads on Me</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/read/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="/read/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gushi</title>
       <link>/read/gushi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/read/gushi/</guid>
       <description>静夜思 李白
- 床前明月光，疑是地上霜。 举头望明月，低头思故乡。</description>
+床前明月光，疑是地上霜。
+举头望明月，低头思故乡。</description>
     </item>
-    
   </channel>
 </rss>
