@@ -20,13 +20,6 @@
 "/>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <script>
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'default'  
-  });
- </script>
 </head>
 
 
@@ -448,7 +441,7 @@ And in your very next sentence you warn me not to discuss with him all the matte
 </main>
 </div>
 
-  <footer>
+<footer>
   
 
 
@@ -460,38 +453,38 @@ And in your very next sentence you warn me not to discuss with him all the matte
 
 
   <div class="footer">
-  
-  <ul class="copyright">
-    <li>© <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger">Lucius Annaeus Seneca</a> 4 BC &ndash; AD 65</li>
-  </ul>
-  
-  <ul>
     
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
+    <ul class="copyright">
+      <li>© <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger">Lucius Annaeus Seneca</a> 4 BC &ndash; AD 65</li>
+    </ul>
     
-    <li class="optional">
-      <a href="/categories/">Categories</a>
-    </li>
-    
-    <li class="optional">
-      <a href="/tags/">Tags</a>
-    </li>
-    
-    <li id="menu-edit">
-      <a href="#">Suggest an edit</a>
-    </li>
-    
-    <li>
-      <a href="#">Back to top</a>
-    </li>
-    
-  </ul>
+    <ul>
+      
+      <li>
+        <a href="/404.html">Contact</a>
+        </li>
+        
+      <li class="optional" >
+        <a href="/categories/">Categories</a>
+        </li>
+        
+      <li class="optional" >
+        <a href="/tags/">Tags</a>
+        </li>
+        
+      <li id="menu-edit" >
+        <a href="/#">Suggest an edit</a>
+        </li>
+        
+      <li>
+        <a href="/#">Back to top</a>
+        </li>
+        
+    </ul>
   </div>
   
   <div class="footer hidden">
-  
+    
 <div>
   <div class="side side-left"><h3>Suggest changes</h3></div>
   
@@ -506,8 +499,15 @@ And in your very next sentence you warn me not to discuss with him all the matte
 
   </div>
   
-  </footer>
-  <script src="/js/features.js" defer></script>
-  </body>
-</html>
+</footer>
+<script src="/%20/js/features.js" defer></script>
+</body>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    mermaid.initialize({ theme: 'default' });
+  });
+</script>
+
+</html>

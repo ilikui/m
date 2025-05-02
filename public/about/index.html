@@ -18,13 +18,6 @@
 <meta name="twitter:description" content="Hugo Prose is a minimalist theme derived from the XMin theme, and inspired by Wowchemy (previously known as the Academic theme), Distill, and tufte.css. This theme itself is completely plain-text and lightweight, and does not use any icons, images, or emojis.1 By default, the theme only uses two JavaScript libraries, MathJax and highlight.js, and they are loaded only when necessary. The rest of JavaScript is written from scratch and also relatively short."/>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-  <script>
-  mermaid.initialize({
-    startOnLoad: true,
-    theme: 'default'  
-  });
- </script>
 </head>
 
 
@@ -537,7 +530,7 @@ helped a lot with our implementation of the client-side search.</p>
 </div>
 
 
-  <footer>
+<footer>
   
 
 
@@ -558,38 +551,45 @@ helped a lot with our implementation of the client-side search.</p>
 
 
   <div class="footer">
-  
-  <ul class="copyright">
-    <li>© <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger">Lucius Annaeus Seneca</a> 4 BC &ndash; AD 65</li>
-  </ul>
-  
-  <ul>
     
-    <li>
-      <a href="/404.html">Contact</a>
-    </li>
+    <ul class="copyright">
+      <li>© <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger">Lucius Annaeus Seneca</a> 4 BC &ndash; AD 65</li>
+    </ul>
     
-    <li class="optional">
-      <a href="/categories/">Categories</a>
-    </li>
-    
-    <li class="optional">
-      <a href="/tags/">Tags</a>
-    </li>
-    
-    <li id="menu-edit">
-      <a href="#">Suggest an edit</a>
-    </li>
-    
-    <li>
-      <a href="#">Back to top</a>
-    </li>
-    
-  </ul>
+    <ul>
+      
+      <li>
+        <a href="/404.html">Contact</a>
+        </li>
+        
+      <li class="optional" >
+        <a href="/categories/">Categories</a>
+        </li>
+        
+      <li class="optional" >
+        <a href="/tags/">Tags</a>
+        </li>
+        
+      <li id="menu-edit" >
+        <a href="/#">Suggest an edit</a>
+        </li>
+        
+      <li>
+        <a href="/#">Back to top</a>
+        </li>
+        
+    </ul>
   </div>
   
-  </footer>
-  <script src="/js/features.js" defer></script>
-  </body>
-</html>
+</footer>
+<script src="/%20/js/features.js" defer></script>
+</body>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    mermaid.initialize({ theme: 'default' });
+  });
+</script>
+
+</html>
