@@ -19,15 +19,21 @@
 "/>
 
 
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        mermaid.initialize({ 
+          theme: 'default',
+          startOnLoad: true,
+          securityLevel: 'loose',
+          flowchart: { useMaxWidth: false }
+        });
+    </script>
 </head>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      mermaid.initialize({ theme: 'default' });
-    });
-  </script>
 
 <body>
 
@@ -72,6 +78,8 @@
   <li><a href="/categories/hugo/">Hugo <span class="bg-number">1</span></a></li>
   
   <li><a href="/categories/letter/">Letter <span class="bg-number">4</span></a></li>
+  
+  <li><a href="/categories/mind/">Mind <span class="bg-number">1</span></a></li>
   
   <li><a href="/categories/publication/">Publication <span class="bg-number">1</span></a></li>
   

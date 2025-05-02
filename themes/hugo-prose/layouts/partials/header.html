@@ -14,15 +14,21 @@
   <link rel="stylesheet" href="{{ " /css/fonts.css" | relURL }}" />
   <link rel="stylesheet" href="{{ " /css/custom.css" | relURL }}" />
   {{ partial "head_custom.html" . }}
+
+  <!-- 在 <head> 或页面底部引入 Mermaid -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        mermaid.initialize({ 
+          theme: 'default',
+          startOnLoad: true,
+          securityLevel: 'loose',
+          flowchart: { useMaxWidth: false }
+        });
+    </script>
 </head>
 
-<!-- 在 <head> 或页面底部引入 Mermaid -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      mermaid.initialize({ theme: 'default' });
-    });
-  </script>
+
 
 <body{{ if .Draft }} class="draft" {{ end }}>
 

@@ -19,15 +19,21 @@
 ::: {.fullwidth}Any Markdown content or code blocks here.```{r, echo=FALSE, fig.dim=c(14, 4)}plot(sunspots)```:::Figure 1: Monthly mean relative sunspot numbers from 1749 to 1983. Collected at Swiss Federal Observatory, Zurich until 1960, then Tokyo Astronomical Observatory.If you add the class fullscroll to the Div, the figure will be scrollable,e.g.,"/>
 
 
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        mermaid.initialize({ 
+          theme: 'default',
+          startOnLoad: true,
+          securityLevel: 'loose',
+          flowchart: { useMaxWidth: false }
+        });
+    </script>
 </head>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      mermaid.initialize({ theme: 'default' });
-    });
-  </script>
 
 <body>
 

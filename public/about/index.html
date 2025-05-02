@@ -18,15 +18,21 @@
 <meta name="twitter:description" content="Hugo Prose is a minimalist theme derived from the XMin theme, and inspired by Wowchemy (previously known as the Academic theme), Distill, and tufte.css. This theme itself is completely plain-text and lightweight, and does not use any icons, images, or emojis.1 By default, the theme only uses two JavaScript libraries, MathJax and highlight.js, and they are loaded only when necessary. The rest of JavaScript is written from scratch and also relatively short."/>
 
 
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        mermaid.initialize({ 
+          theme: 'default',
+          startOnLoad: true,
+          securityLevel: 'loose',
+          flowchart: { useMaxWidth: false }
+        });
+    </script>
 </head>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      mermaid.initialize({ theme: 'default' });
-    });
-  </script>
 
 <body>
 

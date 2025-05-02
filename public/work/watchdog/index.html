@@ -36,15 +36,21 @@
 常用看门狗芯片电路框图"/>
 
 
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        mermaid.initialize({ 
+          theme: 'default',
+          startOnLoad: true,
+          securityLevel: 'loose',
+          flowchart: { useMaxWidth: false }
+        });
+    </script>
 </head>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      mermaid.initialize({ theme: 'default' });
-    });
-  </script>
 
 <body>
 
@@ -268,7 +274,7 @@ Me
 <nav class="post-nav">
   <span class="nav-next">&larr; <a href="/work/t32/" title=Next&#32;post&#32;(older)>Trace32</a></span>
   &hercon;
-  <span class="nav-prev"></span>
+  <span class="nav-prev"><a href="/work/mind/" title=Previous&#32;post&#32;(newer)>Mind</a> &rarr;</span>
 </nav>
 
 
