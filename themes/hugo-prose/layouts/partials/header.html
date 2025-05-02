@@ -14,16 +14,17 @@
   <link rel="stylesheet" href="{{ " /css/fonts.css" | relURL }}" />
   <link rel="stylesheet" href="{{ " /css/custom.css" | relURL }}" />
   {{ partial "head_custom.html" . }}
-</head>
-
-<!-- 在 <head> 或页面底部引入 Mermaid -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-<script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
   mermaid.initialize({
     startOnLoad: true,
     theme: 'default'  // 可选：主题（如 'dark', 'forest'）
   });
-</script>
+ </script>
+</head>
+
+<!-- 在 <head> 或页面底部引入 Mermaid -->
+
 
 <body{{ if .Draft }} class="draft" {{ end }}>
 
