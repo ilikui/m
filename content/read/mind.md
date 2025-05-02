@@ -3,7 +3,9 @@ title: Mind
 style: 'background: #f7f9fb;'
 weight: 2
 ---
-{{</* mermaid */>}}
+
+
+```mermaid
 mindmap
   root((Hugo))
     核心功能
@@ -12,4 +14,4 @@ mindmap
     内容管理
       Markdown 支持
       Shortcodes
-{{</* /mermaid */>}}
+```

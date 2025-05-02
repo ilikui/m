@@ -17,7 +17,12 @@
 </head>
 
 <!-- 在 <head> 或页面底部引入 Mermaid -->
-
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js" defer></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      mermaid.initialize({ theme: 'default' });
+    });
+  </script>
 
 <body{{ if .Draft }} class="draft" {{ end }}>
 
