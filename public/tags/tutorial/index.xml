@@ -6,23 +6,53 @@
     <description>Recent content in Tutorial on NearMe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WatchDog</title>
+      <link>/work/watchdog/</link>
+      <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/work/watchdog/</guid>
+      <description>本文由 简悦 SimpRead 转码， 原文地址 mp.weixin.qq.com
+ 嵌入式软件在运行过程中，很容易因为故障、电磁干扰和软件 bug 而跑飞，导致产品进入死机状态。为了防止死机，嵌入式软件开发了看门狗的功能，看门狗是一种专门用于监测处理器运行状况、在异常情况下复位的一种技术。
+看门狗其实不是提前预防软件跑飞，而是在发现软件跑飞进入死机等异常状态后能让芯片重启，快速恢复到正常状态。
+看门狗已经广泛应用于汽车嵌入式领域。接下来我们来了解看门狗是怎么工作的？具体又分为哪些类型呢？
+1. 基本原理 看门狗 WDT 是 Watch Dog Timer 的缩写，全称是看门狗定时器，所以看门狗的原理与时间参数有关。
+常用的软件看门狗的基本原理是要求软件在预先设定的时间周期内发出喂狗信号，如果超时没有发出喂狗信号，则认为系统发生了故障，会立即强制系统复位。
+这里说的喂狗是指对计数器的初始值进行重置，系统上电后，若看门狗被使能，则计数器从初始值开始自动减 1，一直减到 0 时，就会发出复位信号。
+看门狗软件流程图
+看门狗的基本原理如上面流程图所示，实际过程是需要：
+  先通过芯片中的控制寄存器进行基本设置；
+  然后通过计数器来计算周期时间；
+  最后需要在任务或中断中进行重置的操作。
+  看门狗的作用就像是你养了一条狗，每天早上要定时起来给它喂食，如果超过一定时间还不喂它，它会认为你可能生病了，会立即把你叫醒。
+看门狗超时后会发出叫醒（复位）信号 2. 看门狗的分类
+随着嵌入式系统的发展和产品要求的提高，看门狗又发展出不同的类型。看门狗按照不同方式可以分为硬件看门狗、软件看门狗、内部看门狗、外部看门狗、独立看门狗和窗口看门狗。
+2.1 硬件看门狗
+硬件看门狗是指专用的看门狗芯片，它独立于 MCU 之外，由独立的内部时钟驱动。计数器初始值及时钟频率都由芯片本身决定，外部无法更改，硬件看门狗的输入信号引脚 WDI 与 MCU 的 GPIO 相连；输出信号引脚 WDO 与 MCU 的 RESET 引脚相连。
+硬件看门狗芯片要求 MCU 中的软件在一定的时间内，如 1.6s 内喂狗，超过 1.6s 没有收到喂狗信号，则看门狗内部定时器溢出产生复位信号重启系统。
+常用看门狗芯片电路框图</description>
+    </item>
+    
     <item>
       <title>Trace32</title>
       <link>/work/t32/</link>
       <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
+      
       <guid>/work/t32/</guid>
       <description>Trace32 Learning Guide:
-De Providentia (On providence) - addressed to Lucilius De Constantia Sapientis (On the Firmness of the Wise Person) - addressed to Serenus De Ira (On anger) – A study on the consequences and the control of anger - addressed to his brother Novatus Ad Marciam, De consolatione (To Marcia, On Consolation) – Consoles her on the death of her son De Vita Beata (On the Happy Life) - addressed to Gallio &amp;hellip;</description>
+ De Providentia (On providence) - addressed to Lucilius De Constantia Sapientis (On the Firmness of the Wise Person) - addressed to Serenus De Ira (On anger) – A study on the consequences and the control of anger - addressed to his brother Novatus Ad Marciam, De consolatione (To Marcia, On Consolation) – Consoles her on the death of her son De Vita Beata (On the Happy Life) - addressed to Gallio  &amp;hellip;</description>
     </item>
+    
     <item>
       <title>Seneca&#39;s essays</title>
       <link>/work/essays/</link>
       <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      
       <guid>/work/essays/</guid>
       <description>Traditionally given in the following order:
-De Providentia (On providence) - addressed to Lucilius De Constantia Sapientis (On the Firmness of the Wise Person) - addressed to Serenus De Ira (On anger) – A study on the consequences and the control of anger - addressed to his brother Novatus Ad Marciam, De consolatione (To Marcia, On Consolation) – Consoles her on the death of her son De Vita Beata (On the Happy Life) - addressed to Gallio &amp;hellip;</description>
+ De Providentia (On providence) - addressed to Lucilius De Constantia Sapientis (On the Firmness of the Wise Person) - addressed to Serenus De Ira (On anger) – A study on the consequences and the control of anger - addressed to his brother Novatus Ad Marciam, De consolatione (To Marcia, On Consolation) – Consoles her on the death of her son De Vita Beata (On the Happy Life) - addressed to Gallio  &amp;hellip;</description>
     </item>
+    
   </channel>
 </rss>

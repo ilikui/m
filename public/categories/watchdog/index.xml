@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Works on NearMe</title>
-    <link>/work/</link>
-    <description>Recent content in Works on NearMe</description>
+    <title>WatchDog on NearMe</title>
+    <link>/categories/watchdog/</link>
+    <description>Recent content in WatchDog on NearMe</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/work/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="/categories/watchdog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WatchDog</title>
       <link>/work/watchdog/</link>
@@ -32,37 +32,6 @@
 硬件看门狗是指专用的看门狗芯片，它独立于 MCU 之外，由独立的内部时钟驱动。计数器初始值及时钟频率都由芯片本身决定，外部无法更改，硬件看门狗的输入信号引脚 WDI 与 MCU 的 GPIO 相连；输出信号引脚 WDO 与 MCU 的 RESET 引脚相连。
 硬件看门狗芯片要求 MCU 中的软件在一定的时间内，如 1.6s 内喂狗，超过 1.6s 没有收到喂狗信号，则看门狗内部定时器溢出产生复位信号重启系统。
 常用看门狗芯片电路框图</description>
-    </item>
-    
-    <item>
-      <title>Trace32</title>
-      <link>/work/t32/</link>
-      <pubDate>Sun, 27 Apr 2025 00:00:00 +0000</pubDate>
-      
-      <guid>/work/t32/</guid>
-      <description>Trace32 Learning Guide:
- De Providentia (On providence) - addressed to Lucilius De Constantia Sapientis (On the Firmness of the Wise Person) - addressed to Serenus De Ira (On anger) – A study on the consequences and the control of anger - addressed to his brother Novatus Ad Marciam, De consolatione (To Marcia, On Consolation) – Consoles her on the death of her son De Vita Beata (On the Happy Life) - addressed to Gallio  &amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Seneca&#39;s essays</title>
-      <link>/work/essays/</link>
-      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/work/essays/</guid>
-      <description>Traditionally given in the following order:
- De Providentia (On providence) - addressed to Lucilius De Constantia Sapientis (On the Firmness of the Wise Person) - addressed to Serenus De Ira (On anger) – A study on the consequences and the control of anger - addressed to his brother Novatus Ad Marciam, De consolatione (To Marcia, On Consolation) – Consoles her on the death of her son De Vita Beata (On the Happy Life) - addressed to Gallio  &amp;hellip;</description>
-    </item>
-    
-    <item>
-      <title>Seneca&#39;s tragedies</title>
-      <link>/work/tragedies/</link>
-      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/work/tragedies/</guid>
-      <description>Fabulae crepidatae (tragedies with Greek subjects):
- Hercules or Hercules furens (The Madness of Hercules) Troades (The Trojan Women) Phoenissae (The Phoenician Women) Medea Phaedra Oedipus Agamemnon Thyestes Hercules Oetaeus (Hercules on Oeta): generally considered not written by Seneca. First rejected by Heinsius.  Fabula praetexta (tragedy in Roman setting):
- Octavia: almost certainly not written by Seneca (at least in its final form) since it contains accurate prophecies of both his and Nero’s deaths.</description>
     </item>
     
   </channel>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> WatchDog | NearMe</title>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xiee/utils@v1.13.54/css/article.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xiee/utils/css/heading-anchor.min.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WatchDog"/>
+<meta name="twitter:description" content="本文由 简悦 SimpRead 转码， 原文地址 mp.weixin.qq.com
+ 嵌入式软件在运行过程中，很容易因为故障、电磁干扰和软件 bug 而跑飞，导致产品进入死机状态。为了防止死机，嵌入式软件开发了看门狗的功能，看门狗是一种专门用于监测处理器运行状况、在异常情况下复位的一种技术。
+看门狗其实不是提前预防软件跑飞，而是在发现软件跑飞进入死机等异常状态后能让芯片重启，快速恢复到正常状态。
+看门狗已经广泛应用于汽车嵌入式领域。接下来我们来了解看门狗是怎么工作的？具体又分为哪些类型呢？
+1. 基本原理 看门狗 WDT 是 Watch Dog Timer 的缩写，全称是看门狗定时器，所以看门狗的原理与时间参数有关。
+常用的软件看门狗的基本原理是要求软件在预先设定的时间周期内发出喂狗信号，如果超时没有发出喂狗信号，则认为系统发生了故障，会立即强制系统复位。
+这里说的喂狗是指对计数器的初始值进行重置，系统上电后，若看门狗被使能，则计数器从初始值开始自动减 1，一直减到 0 时，就会发出复位信号。
+看门狗软件流程图
+看门狗的基本原理如上面流程图所示，实际过程是需要：
+  先通过芯片中的控制寄存器进行基本设置；
+  然后通过计数器来计算周期时间；
+  最后需要在任务或中断中进行重置的操作。
+  看门狗的作用就像是你养了一条狗，每天早上要定时起来给它喂食，如果超过一定时间还不喂它，它会认为你可能生病了，会立即把你叫醒。
+看门狗超时后会发出叫醒（复位）信号 2. 看门狗的分类
+随着嵌入式系统的发展和产品要求的提高，看门狗又发展出不同的类型。看门狗按照不同方式可以分为硬件看门狗、软件看门狗、内部看门狗、外部看门狗、独立看门狗和窗口看门狗。
+2.1 硬件看门狗
+硬件看门狗是指专用的看门狗芯片，它独立于 MCU 之外，由独立的内部时钟驱动。计数器初始值及时钟频率都由芯片本身决定，外部无法更改，硬件看门狗的输入信号引脚 WDI 与 MCU 的 GPIO 相连；输出信号引脚 WDO 与 MCU 的 RESET 引脚相连。
+硬件看门狗芯片要求 MCU 中的软件在一定的时间内，如 1.6s 内喂狗，超过 1.6s 没有收到喂狗信号，则看门狗内部定时器溢出产生复位信号重启系统。
+常用看门狗芯片电路框图"/>
+
+
+  </head>
+
+  <body>
+
+    <nav class="menu">
+    <ul>
+      <li class="left">
+        <a href="/"><span>NearMe</span></a>
+      </li>
+      
+      <li>
+        <a href="/">Home</a>
+      </li>
+      
+      <li>
+        <a href="/about/">About</a>
+      </li>
+      
+      <li>
+        <a href="/sitemap/">Sitemap</a>
+      </li>
+      
+      <li id="menu-search">
+        <a href="/#">Search</a>
+      </li>
+      
+      <li>
+        <a href="/index.xml">Subscribe</a>
+      </li>
+      
+    </ul>
+    </nav>
+
+
+<div class="container single">
+<main>
+
+<div class="article-meta">
+<h1><span class="title">WatchDog</span></h1>
+
+<h3 class="author">
+Me
+</h3>
+
+<h3 class="date">2025-05-02</h3>
+<p class="terms">
+  
+  
+  Categories: <a href="/categories/watchdog">WatchDog</a> 
+  
+  
+  
+  Tags: <a href="/tags/tutorial">Tutorial</a> 
+  
+  
+</p>
+</div>
+
+<div class="article">
+<blockquote>
+<p>本文由 <a href="http://ksria.com/simpread/">简悦 SimpRead</a> 转码， 原文地址 <a href="https://mp.weixin.qq.com/s/g3bvYnrNQHfcsmDj_fhr3w">mp.weixin.qq.com</a></p>
+</blockquote>
+<p>嵌入式软件在运行过程中，很容易因为故障、电磁干扰和软件 bug 而跑飞，导致产品进入死机状态。为了防止死机，嵌入式软件开发了看门狗的功能，看门狗是一种专门用于监测处理器运行状况、在异常情况下复位的一种技术。</p>
+<p>看门狗其实不是提前预防软件跑飞，而是在发现软件跑飞进入死机等异常状态后能让芯片重启，快速恢复到正常状态。</p>
+<p>看门狗已经广泛应用于汽车嵌入式领域。接下来我们来了解<strong>看门狗是怎么工作的？具体又分为哪些类型呢？</strong></p>
+<h1 id="1基本原理"><strong>1. 基本原理</strong></h1>
+<p><strong>看门狗 WDT 是 Watch Dog Timer</strong> 的缩写，全称是看门狗定时器，所以看门狗的原理与时间参数有关。</p>
+<p>常用的软件看门狗的基本原理是要求软件在预先设定的时间周期内发出喂狗信号，如果超时没有发出喂狗信号，则认为系统发生了故障，会立即强制系统复位。</p>
+<p>这里说的喂狗是指对计数器的初始值进行重置，系统上电后，若看门狗被使能，则计数器从初始值开始自动减 1，一直减到 0 时，就会发出复位信号。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ajPz2rZHFU4VEyj540QPtuuJkFsnS7ggsmIxK2f5kwicXSym40zRQiaH3tMZGibiaxS9qmK3a5RMxnEyz2vhlYw3gA/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>看门狗软件流程图</p>
+<p>看门狗的基本原理如上面流程图所示，实际过程是需要：</p>
+<ul>
+<li>
+<p>先通过芯片中的控制寄存器进行基本设置；</p>
+</li>
+<li>
+<p>然后通过计数器来计算周期时间；</p>
+</li>
+<li>
+<p>最后需要在任务或中断中进行重置的操作。</p>
+</li>
+</ul>
+<p>看门狗的作用就像是你养了一条狗，每天早上要定时起来给它喂食，如果超过一定时间还不喂它，它会认为你可能生病了，会立即把你叫醒。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ajPz2rZHFU4VEyj540QPtuuJkFsnS7ggX1hrkcFrC9KhpzhvZyFaeYWcZZV4dyM3vx4cCWLxsPqzvaHTab9lZQ/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<h1 id="看门狗超时后会发出叫醒复位信号">看门狗超时后会发出叫醒（复位）信号</h1>
+<p><strong>2. 看门狗的分类</strong></p>
+<p>随着嵌入式系统的发展和产品要求的提高，看门狗又发展出不同的类型。看门狗按照不同方式可以分为<strong>硬件看门狗、软件看门狗、内部看门狗、外部看门狗、独立看门狗和窗口看门狗。</strong></p>
+<p><strong>2.1 硬件看门狗</strong></p>
+<p>硬件看门狗是指专用的看门狗芯片，它独立于 MCU 之外，由独立的内部时钟驱动。计数器初始值及时钟频率都由芯片本身决定，外部无法更改，硬件看门狗的输入信号引脚 WDI 与 MCU 的 GPIO 相连；输出信号引脚 WDO 与 MCU 的 RESET 引脚相连。</p>
+<p>硬件看门狗芯片要求 MCU 中的软件在一定的时间内，如 1.6s 内喂狗，超过 1.6s 没有收到喂狗信号，则看门狗内部定时器溢出产生复位信号重启系统。</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/ajPz2rZHFU4VEyj540QPtuuJkFsnS7ggIpIJreJ0gJjlCXbqKfUuLgiaS9ibwkOvMxeichG7hRw0t7h0vs9Rtjkpg/640?wx_fmt=png&amp;from=appmsg" alt=""></p>
+<p>常用看门狗芯片电路框图</p>
+<p>喂狗信号通过 MCU 的 GPIO 输出，通过看门狗芯片的 WDI 输入，WDI 悬空时为禁止看门狗功能，此时看门狗不能产生复位信号；</p>
+<p>WDI 输入高电平或低电平持续时间超过 1.6s 后看门狗定时器溢出导致 WDO 管脚输出低电平，将 MCU 复位。所以，这里的喂狗信号实际上是 1 个翻转信号，通过翻转输入状态会重置看门狗内部的定时器。</p>
+<p>硬件看门狗也可以称为外部看门狗，硬件看门狗有的是专用的看门狗芯片，还有的是集成在电源管理芯片中，还会附带延迟复位和电源检测的功能, 除了简单的 GPIO 连接，可能还需要使用 SPI、I2C 通信等方式进行访问。</p>
+<p><strong>2.2 软件看门狗</strong></p>
+<p>早期的 MCU 内部没有集成的看门狗，如果不想使用外部硬件看门狗的话，也可以采用纯软件的方法来模拟看门狗功能。</p>
+<p>利用 MCU 中闲置的定时器 / 计数器就可以设计一个软件看门狗。具体实现步骤如下：</p>
+<ul>
+<li>
+<p>首先，在初始化程序中设置定时器 / 计数器的工作方式、设置计数器和定时时间的初值、打开中断。</p>
+</li>
+<li>
+<p>然后，根据定时器的时间，在主程序中按一定的时间间隔运行复位定时器的指令，也就是喂狗，这个时间间隔可以根据系统时钟与指令周期计算出来，注意时间间隔必须小于定时器的定时时间。</p>
+</li>
+<li>
+<p>最后，在定时器的中断服务程序中，设置一条无条件转移指令，将程序计数器 PC 转移到初始化程序的入口。</p>
+</li>
+</ul>
+<p>软件看门狗的优点是无需额外的硬件支持，成本低，但由于这个功能完全是靠软件来模拟，所以当软件自身出现问题，比如中断服务出错，则有可能导致看门狗功能失效。</p>
+<p>软件模拟的看门狗如果设置不好，叫醒服务会失效</p>
+<p><strong>2.3 内部看门狗</strong></p>
+<p>内部看门狗是指 CPU 内置了一个看门狗模块，相当于把外部看门狗的功能集成到 MCU 内部，内部看门狗是一种内部硬件和软件结合的看门狗，用起来更加方便和稳定。</p>
+<p>内部看门狗的时钟频率由 CPU 决定，计数器初值由软件进行设置，超时时间可以在一定范围内变化。</p>
+<p>内部看门狗的配置主要是三个寄存器，<strong>控制寄存器 WTCON、数据寄存器 WTDAT 和计数寄存器 WTCNT。</strong></p>
+<p>内部看门狗原理框图</p>
+<p>先通过控制寄存器 WTCON 对系统时钟进行分频设置，通过寄存器中的分频因子等参数设置后，即可得出计数器的递减时间，比如设置递减时间是 0.1ms, 则每隔 0.1ms, 计数器值会减 1。</p>
+<p>如果将计数寄存器 WTCNT 的初始值赋为 10000，则看门狗会每 1s 产生 1 个超时复位。</p>
+<p>如果不想让看门狗复位，就要在 WTCNT 减为 0 之前，也就是在 1s 的时间内喂狗，需要在 1s 内通过 WTDAT 将 WTCNT 的值重置为 10000，否则看门狗模块就会产生中断和复位信号。</p>
+<p>与硬件看门狗相比，软件模拟看门狗和内部看门狗的优点都是设置灵活，只需修改相关的寄存器，就可以实现打开、关闭和模式更改，可以通过程序改变初始时间，也可以随时禁用。</p>
+<p>但是缺点是首先需要初始化，如果程序在初始化、启动完成前跑飞或在禁用后跑飞，看门狗就无法复位系统，这样看门狗的作用就没有了，系统恢复能力降低。</p>
+<p>软件看门狗有时会不在状态，无法提供叫醒服务</p>
+<p>而硬件看门狗主要由外部芯片控制，一旦启动不断电就停不下来，硬件看门狗的可靠性更高。</p>
+<p>硬件看门狗会竭尽所能强制叫醒，可靠性更高</p>
+<p><strong>2.4 独立看门狗</strong></p>
+<p>独立看门狗也是一种芯片内部的看门狗，所谓的独立是指看门狗模块可以独立于主程序运行，这是因为它有独立的时钟，这样即便主时钟发生故障，看门狗模块仍然能保持在正常的工作状态。</p>
+<p>独立看门狗采用专用的低速时钟（LSI）驱动，时钟由独立的 RC 振荡器提供，其基本原理也比较简单，根据期望的周期时间，设置好计数器，计数器会在程序运行时进行自动的递减，程序必须在最大时间内进行计数器的更新，也就是喂狗。如果超时，也就是计数值减为 0 时，内部会产生复位信号，芯片就会重启。</p>
+<p>独立看门狗适合对时间精度要求比较低的场合。</p>
+<p><strong>2.5 窗口看门狗</strong></p>
+<p>常规的看门狗对时间的要求并不精准，只要在最大的时间（计数器初值）内喂狗即可。这种方式有两个缺点：</p>
+<ul>
+<li>
+<p>1 是复位的时间略长，因为要等到计数值为 0 时才起作用，如果计数值设置过大，等待重启的时间会更长。</p>
+</li>
+<li>
+<p>2 是某些情况下，软件发生异常时也会快速的喂狗，这种异常就会导致看门狗程序失效，无法重启。</p>
+</li>
+</ul>
+<p>针对常规看门狗的缺点，又出现了窗口看门狗。之所以叫窗口，就像家里的窗户一样，它是有上窗框和下窗框的，也就是有上下限的。</p>
+<p>窗口看门狗的时间寄存器有两个，分别设定上限时间和下限时间，这样就要求喂狗的时间不能过早也不能过晚。窗口看门狗在程序运行时，计数器也会进行自动的递减，但是程序必须在规定的时间范围内喂狗，喂狗太早也不行，也会产生复位中断。</p>
+<p>刚吃完晚饭，就喂我吃早饭，主人脑子是不是要重启一下？</p>
+<p>窗口看门狗中的计数器、上限时间和下限时间，可以认为是一个时间轴上的记录值。假设时间轴为 0-100, 初始设置计数器为 90，上限为 70，下限为 50，程序运行后，计数器从 90 递减，只有计数器小于 70，大于 50 时，对计数器进行重置才有效。</p>
+<p>窗口看门狗时间轴参考图</p>
+<ul>
+<li>
+<p>当计数器的值大于上限值时你对计数器进行重置，比如计数器为 80 时进行重置，系统将会产生复位；</p>
+</li>
+<li>
+<p>当计数器的值等于下限值，比如计数器为 50 时，系统会先产生中断，要求中断程序中对计数器进行重置，如果中断程序中没有对计数器进行重置，则计数器会继续减小，小于 50 后系统就会产生复位。</p>
+</li>
+</ul>
+<p>所以时间上限值必须小于计数器的初始值，上限值如果大于计数器的初始值，就没有作用了；同样上限值也必须大于下限值，否则也没有意义。</p>
+<p><strong>3. 小结</strong></p>
+<p>看门狗是嵌入式系统中常用的监控软件，常规看门狗只有最长时间限值，而窗口看门狗即有时间下限，还有时间上限。</p>
+<p>窗口看门狗的监控作用更严格，除了防止程序跑飞、死循环，还可以监控软件逻辑和软件执行效果。</p>
+<p>此外，无论是内部还是外部看门狗，在软件调试时需要先将看门狗关掉，否则在软件不稳定或调试遇到断点时，会触发看门狗导致系统复位，影响软件功能调试。</p>
+<p>软件稳定后建议在主芯片上电第一时间，就初始化和使能看门狗功能，防止软件在启动看门狗之前跑飞，这样可以尽可能的提高软件看门狗的可靠性。</p>
+<p>内部软件看门狗成本低，软件配置简单，但是可能复位不完全，MCU 内部存在问题时，可能导致看门狗失效。外部看门狗设备上电就自动开启运行，可靠性高。但是成本高，软件配置复杂！</p>
+
+</div>
+</main>
+
+<section class="appendix">
+
+
+<div>
+  <div class="side side-left"><h3>Author&#39;s bio</h3></div>
+  <div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Reuse</h3></div>
+  Text and figures are licensed under <a href="https://creativecommons.org/" target="_blank"><img src="https://creativecommons.org/wp-content/uploads/2020/06/cc.xlarge-300x300.png" height="20" width="20"></a>. The source code is licensed under MIT. The full source is available at <a href="https://github.com/ilikui/m">https://github.com/ilikui/m</a>.
+</div>
+
+
+
+<div>
+  <div class="side side-left"><h3>Suggest changes</h3></div>
+  
+  
+  
+    
+    
+  
+  If you find any mistakes (including typos) or want to suggest changes, please feel free to <a href="https://github.com/ilikui/m/blob/main/content/work/2025-05-02-WatchDog.md" id="edit-link">edit the source file of this page on Github and create a pull request.</a>
+</div>
+
+
+
+
+<div>
+  <div class="side side-left"><h3>Citation</h3></div>
+  <p>For attribution, please cite this work as</p>
+  <pre><code>Me (2025). WatchDog. NearMe. /work/watchdog/</code></pre>
+  <p>BibTeX citation</p>
+  <pre><code>@misc{
+  title = "WatchDog",
+  author = "Me",
+  year = "2025",
+  journal = "NearMe",
+  note = "/work/watchdog/"
+}</code></pre>
+</div>
+
+</section>
+
+
+
+<nav class="post-nav">
+  <span class="nav-next">&larr; <a href="/work/t32/" title=Next&#32;post&#32;(older)>Trace32</a></span>
+  &hercon;
+  <span class="nav-prev"></span>
+</nav>
+
+
+
+
+
+</div>
+
+
+  <footer>
+  
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/combine/npm/@xiee/utils/js/number-sections.min.js,npm/@xiee/utils/js/toc.min.js,npm/@xiee/utils/js/toc-highlight.min.js,npm/@xiee/utils/js/sidenotes.min.js,npm/@xiee/utils/js/right-quote.min.js,npm/@xiee/utils/js/center-img.min.js,npm/@xiee/utils/js/fix-pandoc.min.js,npm/@xiee/utils/js/heading-anchor.min.js" defer></script>
+
+
+
+
+  <div class="footer">
+  
+  <ul class="copyright">
+    <li>© <a href="https://en.wikipedia.org/wiki/Seneca_the_Younger">Lucius Annaeus Seneca</a> 4 BC &ndash; AD 65</li>
+  </ul>
+  
+  <ul>
+    
+    <li>
+      <a href="/404.html">Contact</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/categories/">Categories</a>
+    </li>
+    
+    <li class="optional">
+      <a href="/tags/">Tags</a>
+    </li>
+    
+    <li id="menu-edit">
+      <a href="#">Suggest an edit</a>
+    </li>
+    
+    <li>
+      <a href="#">Back to top</a>
+    </li>
+    
+  </ul>
+  </div>
+  
+  </footer>
+  <script src="/js/features.js" defer></script>
+  </body>
+</html>
+
